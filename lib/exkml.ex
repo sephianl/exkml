@@ -132,6 +132,11 @@ defmodule Exkml do
         key   = String.trim(chars)
         value = String.trim(value)
 
+        value = case value do
+          "" -> nil
+          v -> v
+        end
+
         {key, value}
     end
   end
